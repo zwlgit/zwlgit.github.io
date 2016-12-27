@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./reset.css">
+</head>
+	<style>
+	*{
+		margin: 0;
+		padding:0;
+	}
+	html,body{
+		width: 100%;
+		height: 100%;
+	}
+	#mh-wraper{
+		width: 100%;
+		height: 100%;
+		display: -webkit-box;
+		-webkit-box-orient:vertical;
+	}
+
+	/* 头部样式 */
+	.mh-header-bar{
+		width: 100%;
+		height:45px;
+		background:#f2f2f2;
+		display: -webkit-box;
+		-webkit-box-pack:justify;
+		-webkit-box-align:center;
+		box-sizing:border-box;
+		padding: 0 20px;
+	}
+	.mh-header-bar h1{
+		text-align:center;
+		height: 45px;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 45px;
+	}
+	.header-icon-group{
+		display: block;		
+		height: 45px;
+		line-height: 45px;
+		font-size: 14px;
+	}
+	.header-icon-group .icon-address{	
+		width: 16px;
+		height: 21px;
+		display: inline-block;
+		background:url(./images/1_06.png);
+		background-size: 100%;
+	
+	}
+	.header-icon-group .icon-gift{	
+		width: 20px;
+		height: 21px;
+		display: inline-block;
+		background:url(./images/1_03.png);
+		background-size: 100%;
+	}
+
+	/* 主体 */
+	.mh-main-view{
+		width: 100%;
+		overflow: auto;		
+		-webkit-box-flex:1;
+	}
+ 	.banner{
+		width: 100%;
+	}
+	.banner img{
+		width: 100%;
+	}
+	.mh-view{
+		padding:0 10px;
+	}
+	.mh-nav{
+		width: 100%;
+		height: 93px;
+		border-bottom:10px #f2f2f2 solid;
+		display: -webkit-box; 
+		-webkit-box-align:center;
+		-webkit-box-pack:justify;
+	}
+	.mh-nav a{
+		width: 50px;
+		/* background: yellow;
+		-webkit-box-pack:center;
+		display: block; */
+		-webkit-box-flex:1;
+	}
+	.mh-nav a i{
+		width: 40px;
+		margin: 0 5px;
+		height: 42px;
+		overflow: hidden;
+		display: block;
+		background: url(./images/1_12.png) no-repeat;
+		background-size:375px 46px;
+	}
+
+	.mh-nav a i.icon-server{
+		background-position:  -18px -3px;
+	}
+	.mh-nav a i.icon-product{
+		background-position:  -93px -3px;
+	}
+	.mh-nav a i.icon-method{
+		background-position:  -167px -3px;
+	}
+	.mh-nav a i.icon-select{
+		background-position:  -241px -3px;
+	}
+	.mh-nav a i.icon-process{
+		background-position:  -314px -3px;
+	}
+	.mh-nav a span{
+		display: block;
+		text-align: center;
+		line-height: 2;
+	}
+	.pics{
+		width: 100%;
+		display:-webkit-box;
+	}
+	.pics div{
+		width:50%;
+		-webkit-box-flex:1;
+	}
+	.pics .pic-left{
+		margin-right:5px;
+	}
+	.pics div img{
+		width:100%;
+		margin: 0 0 5px 0;
+	}
+	.recommended{
+		margin-top: 10px;
+	}
+	.title{
+		height: 35px;
+		background: #f2f2f2;
+		display: -webkit-box;
+		-webkit-box-pack:center;
+	}
+	.title span{
+		display: block;
+		width: 30%;
+		height: 1px;
+		border-top: 1px solid #666;
+		margin-top: 16px;
+	}
+	.title h2{
+		line-height: 35px;
+		font-size:16px;
+		text-align: center;
+		margin: 0 10px;
+	}
+	.recommended dl{
+		width: 100%;
+		height: 105px;
+		border-bottom: 1px solid #666;	
+	}
+	.recommended dl dt{
+		width:20%;
+		float:left;
+		vertical-align: middle;
+	}
+	.recommended dl dt img{
+		width: 100px;
+	}
+	.recommended dl dd{
+		width: 70%;
+		float:right;
+		display: -webkit-box;
+		-webkit-box-pack:justify;
+		padding-right: 10px;
+	}
+	.recommended dl dd ul{
+		width: 100%;
+		color: #999;
+	} 
+	.recommended dl dd li.li-fir{
+		font-size: 20px;
+		height: 45px;
+		line-height: 45px;
+	}
+	.recommended dl dd ul li.li-last{
+		display: -webkit-box;
+		-webkit-box-pack:justify;
+		height: 30px;
+		line-height: 30px;
+	}
+	.recommen-price span{
+		color: #fe92ac;
+		font-size: 16px;
+	} 
+	.mh-footer-bar{
+		width: 100%;
+		height: 49px;
+		background: #f2f2f2;
+		border-top: 1px solid #dedede;
+		display: -webkit-box;
+		-webkit-box-pack:justify;
+		-webkit-box-align:center;
+		box-sizing:border-box;
+		padding: 0 20px;
+	}
+	.mh-footer-bar a{
+		display: block;
+		width: 27px;
+	}
+	.mh-footer-bar a i{
+		background: url(./images/1_30.png);
+		background-size:322px auto;
+		width: 23px;
+		height: 25px;
+		display: block;
+		margin-left: 2px;
+	}
+	.mh-footer-bar a span{
+		width: 100%;
+		display: block;
+		text-align: center;
+		line-height: 20px;
+	}
+	.mh-footer-bar .icon-index{
+		background-position: -5px 0;
+	}
+	.mh-footer-bar .icon-order{
+		background-position: -100px 0;
+	}
+	.mh-footer-bar .icon-mine{
+		background-position: -193px 0;
+	}
+	.mh-footer-bar .icon-more{
+		background-position: -288px 0;
+	}
+
+
+
+	</style>
+<body>
+	<div id="mh-wraper">
+	<!-- {头部 -->
+		<header class="mh-header-bar">		
+			<a class="header-icon-group">
+				<i class="icon-address"></i>北京
+			</a>			
+			<h1>魅狐来了</h1>
+			<a class="header-icon-group">
+				<i class="icon-gift"></i>
+			</a>
+		</header>
+	<!-- 头部} -->		
+		<div class="mh-main-view">
+			<section class="banner">
+				<img src="./images/1_10.png" alt="">
+			</section>
+			<section class="mh-view">
+				<nav class="mh-nav">
+					<a href="">
+						<i class="icon-server"></i>
+						<span>服务标准</span>
+					</a>
+					<a href="">
+						<i class="icon-product"></i>
+						<span>产品标准</span>
+					</a>
+					<a href="">
+						<i class="icon-method"></i>
+						<span>技法标准</span>
+					</a>
+					<a href="">
+						<i class="icon-select"></i>
+						<span>选拔标准</span>
+					</a>
+					<a href="">
+						<i class="icon-process"></i>
+						<span>流程标准</span>
+					</a>
+				</nav>
+				<div class="pics">
+					<div class="pic-left">
+						<img src="./images/1_15.png" alt="">
+					</div>
+					<div class="pic-right">
+						<img src="./images/1_17.png" alt="">
+						<img src="./images/1_21.png" alt="">
+					</div>
+				</div>
+				<div class="recommended">
+					<div class="title">
+						<span></span>
+						<h2>手艺人推荐</h2>
+						<span></span>
+					</div>
+					<dl>
+						<dt><img src="images/1_24.png" alt=""></dt>
+						<dd>
+							<ul>
+								<li class="li-fir">玛丽</li>
+								<li>擅长：落枕推拿，快速见效</li>
+								<li class="li-last">
+									<p class="recommen-price">
+										<span>￥99</span>
+										/40分钟
+									</p>
+									<p class="recommen-right">
+										接单量：<span>554</span>
+									</p>
+									
+								</li>
+							</ul>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/1_24.png" alt=""></dt>
+						<dd>
+							<ul>
+								<li class="li-fir">玛丽</li>
+								<li>擅长：落枕推拿，快速见效</li>
+								<li class="li-last">
+									<p class="recommen-price">
+										<span>￥99</span>
+										/40分钟
+									</p>
+									<p class="recommen-right">
+										接单量：<span>554</span>
+									</p>
+									
+								</li>
+							</ul>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/1_24.png" alt=""></dt>
+						<dd>
+							<ul>
+								<li class="li-fir">玛丽</li>
+								<li>擅长：落枕推拿，快速见效</li>
+								<li class="li-last">
+									<p class="recommen-price">
+										<span>￥99</span>
+										/40分钟
+									</p>
+									<p class="recommen-right">
+										接单量：<span>554</span>
+									</p>
+									
+								</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</section>
+				
+		</div>
+		<footer class="mh-footer-bar">
+			<a href="">
+				<i class="icon-index"></i>
+				<span>首页</span>
+			</a>
+			<a href="">
+				<i class="icon-order"></i>
+				<span>订单</span>
+			</a>
+			<a href="">
+				<i class="icon-mine"></i>
+				<span>我的</span>
+			</a>
+			<a href="">
+				<i class="icon-more"></i>
+				<span>更多</span>
+			</a>
+		</footer>
+	</div>
+</body>
+</html>
